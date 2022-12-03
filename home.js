@@ -32,7 +32,7 @@ console.log(greetUser ('chandler'))
 
 
 //////////////////PROBLEM 2////////////////////
-/* 
+/*  
     Below is an array of zip codes that are in
     the restaurant's delivery zone. 
 
