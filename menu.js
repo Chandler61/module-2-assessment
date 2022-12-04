@@ -34,7 +34,7 @@ let pizza = {
     price: 10,
     category: "Pizza",
     popularity: 100,
-    rating: 96,
+    rating: 4.7,
     tags: ['peporoni', 'sauce', 'cheese', 'gluten-free']
 } 
 //CODE HERE
@@ -48,7 +48,7 @@ let pizza = {
     First, log the popularity of pizza. 
     Use dot notation to access the value.
 */
-
+console.log(pizza.popularity)
 //CODE HERE
 
 
@@ -58,7 +58,7 @@ let pizza = {
     Use a combination of dots and brackets to
     get the value.
 */
-
+console.log(pizza.tags[2])
 //CODE HERE
 
 
@@ -68,7 +68,7 @@ let pizza = {
     
     Print the value of your new price variable.
 */
-
+console.log(pizza.price)
 //CODE HERE
 
 
@@ -78,7 +78,7 @@ let pizza = {
 
     Print the value of your category variable. 
 */
-
+console.log(pizza.category)
 //CODE HERE
 
 
@@ -93,7 +93,14 @@ let pizza = {
     tags. That way, you'll be able to use this
     data in some functions that you'll write.
 */
-
+let foodArr = {
+    name: "vegan pizza",
+    price: 11,
+    category: "Pizza",
+    popularity: 100,
+    rating: 4.5,
+    tags:["vegan", "healthy", "sauce"] 
+}
 //CODE HERE
 
 
@@ -109,7 +116,12 @@ let pizza = {
     You can check for any tag that at least 1 of
     your food objects has.
 */
+const filteredFood = arr => {
+    const filtered = arr.filter(obj => obj.vegan)
+    return filtered[0]
+}
 
+console.log(filteredFood(foodArr))
 //CODE HERE
 
 // const filteredFood = foodArr.filter(/* CALLBACK HERE */)
@@ -154,7 +166,13 @@ let pizza = {
     
     Return the filtered array from the entire function
 */
-
+const filterByProperty = (property, number, type) => {
+    property.forEach(element => {
+        number(element, type)
+        return filterByProperty
+      }  )
+    let holdfiltered = ({filteredFood})
+}
 //CODE HERE
 
 
@@ -164,5 +182,5 @@ let pizza = {
 
     You'll have to console.log to see the filtered array
 */
-
+let money = new filterByProperty('popular', 3, 'above')
 //CODE HERE

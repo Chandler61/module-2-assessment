@@ -18,7 +18,15 @@
     Where NAME and SHIFTS reference the values
     stored on the object.
 */
-
+class Employee {
+    constructor(name, shift){
+        this.name = name
+        this.shift = shift
+    }
+    getSchedule(){
+        console.log(`${this.name} works on ${this.shift}`)
+    }
+}
 //CODE HERE
 
 
@@ -32,14 +40,15 @@
     name: Jess
     shifts: weekday mornings, weekday afternoons
 */
-
+let empOne = new Employee('Jess', 'weekday mornings, weekday afernoons')
 //CODE HERE
 
 /*
     Call the `getSchedule` method on the
     `empOne` object.
 */
-
+empOne.getSchedule()
+console.log(empOne)
 //CODE HERE
 
 
@@ -54,7 +63,11 @@
     spread operator or reassign it using 
     dot or bracket notation.
 */
-
+//const empTwo = {... empOne}
+const empTwo = empOne.map(function(name){
+    return name = 'Nick'
+})
+console.log(empTwo)
 //CODE HERE
 
 
@@ -81,7 +94,19 @@
     The function should push the name into 
     the employees array. 
 */
+class Manager extends Employee {
+    constructor(name, shift, employees){
+        super(name, shift)
+        this.employees = employees
+    }
+    getEmployees(){
+        console.log(`${this.name} manages ${this.employees} `)
+    }
+    addEmployee(emp){
+        return emp
+    }
 
+}
 //CODE HERE
 
 
@@ -96,7 +121,7 @@
     shifts: weekday mornings, weekday afternoons
     employees: Cece and Schmidt
 */
-
+let manager = new Manager('Winson', 'Weekday mornings, weekday afternoons', 'Cece and Schmidt')
 //CODE HERE
 
 
@@ -104,7 +129,8 @@
     Call the `getEmployees` method on the
     `manager` object.  
 */
-
+manager = getEmployees()
+console.log({manager})
 //CODE HERE
 
 /*
@@ -112,7 +138,8 @@
     `manager` object passing in the string 
     'Coach' or whatever name you'd like.
 */
-
+manager = addEmployee('Coach')
+console.log({manager})
 //CODE HERE 
 
 /*
@@ -120,5 +147,6 @@
     `manager` object again to confirm 
     that an employee was added.
 */
-
+manager = getEmployees()
+console.log(manager)
 //CODE HERE

@@ -33,6 +33,8 @@ const cart = [
     }
 ]
 
+const summedPrice = cart.reduce((acc, cur) => acc + cur.price, 0)
+console.log(summedPrice)
 //CODE HERE
 
 // const summedPrice = cart.reduce(/* CALLBACK HERE */)
@@ -53,6 +55,12 @@ const cart = [
     decimals, for example: .06 for a 6% tax.
 */
 
+const calcFinalPrice = (cartTotal, couponValue, tax) => {
+    cartTotal.price = cartTotal.price * (1 + tax)
+    return cartTotal - couponValue
+}
+
+console.log(calcFinalPrice(10, 2, .06))
 //CODE HERE
 
 
@@ -77,14 +85,28 @@ const cart = [
     Your object should have at least 4 properties. 
 */
 
+
 /*
     TEXT ANSWER HERE
-
+My customer object will have these 4 properties
+*Name
+*Phone Number
+*Email
+*Order
+I chose name because you will need the name of the person who ordered. I chose Phone Number 
+in case you have to call the customer about any problems that may arise while their order 
+is being made. I chose email so that way we could email them a copy of their receipt and 
+details about our company. Finally i chose order so that way we knew what they ordered.
 */
 
 /*
     Now, create a customer object following your own
     guidelines.
 */
-
+const customer = {
+    name: '',
+    phoneNumber:0,
+    email:'',
+    order:'',
+}
 //CODE HERE
